@@ -106,9 +106,9 @@
 
         <!-- Hero Headline -->
         <h1 class="text-5xl md:text-6xl font-light text-gray-900 mb-8 leading-tight tracking-tight">
-            Your Notes App Is A<br/>
-            <span class="font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">GRAVEYARD</span><br/>
-            <span class="text-gray-400 font-light">Of Ideas That Never Launched</span>
+            Build Your First Idea<br/>
+            <span class="font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">In Under 2 Weeks</span><br/>
+            <span class="text-gray-400 font-light">Using AI Tools That Actually Work</span>
         </h1>
 
         <!-- Subheadline -->
@@ -407,15 +407,22 @@
                     <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center" style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 400; color: rgb(23, 23, 23); font-size: 14px;">
                         timetoShip
                     </div>
-                    <div class="text-xs text-gray-600">Boilerplates</div>
+                    <div class="text-xs text-gray-600">Templates</div>
                 </div>
 
                 <!-- Cursor -->
                 <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-black to-gray-800 rounded-2xl flex items-center justify-center">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M7.333 4.667L9.333 16.667L16 13.333L22.667 16.667L24.667 4.667L16 10.667L7.333 4.667Z" fill="white"/>
-                            <path d="M9.333 16.667L16 13.333L22.667 16.667" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                            <circle cx="28" cy="28" r="28" fill="url(#cursorGradient)"/>
+                            <path d="M16 16L20 40L28 35L36 40L40 16L28 24L16 16Z" fill="white"/>
+                            <path d="M20 40L28 35L36 40" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="cursorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#000000"/>
+                                    <stop offset="100%" style="stop-color:#1f2937"/>
+                                </linearGradient>
+                            </defs>
                         </svg>
                     </div>
                     <div class="text-xs text-gray-600">Cursor</div>
@@ -423,30 +430,50 @@
 
                 <!-- v0.dev -->
                 <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-3 bg-black rounded-2xl flex items-center justify-center">
-                        <span class="text-white text-lg font-bold">v0</span>
+                    <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                            <rect width="56" height="56" rx="12" fill="black"/>
+                            <text x="28" y="38" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle" fill="white">v0</text>
+                        </svg>
                     </div>
                     <div class="text-xs text-gray-600">v0.dev</div>
                 </div>
 
                 <!-- AiStudio -->
                 <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-purple-600 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
-                        <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                            <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                                <div class="w-3 h-3 bg-purple-600 rounded-full"></div>
-                            </div>
-                        </div>
+                    <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                            <rect width="56" height="56" rx="12" fill="url(#aiStudioGradient)"/>
+                            <circle cx="28" cy="20" r="8" fill="white" opacity="0.9"/>
+                            <circle cx="28" cy="20" r="5" fill="url(#aiStudioGradient)"/>
+                            <circle cx="20" cy="36" r="3" fill="white" opacity="0.7"/>
+                            <circle cx="36" cy="36" r="3" fill="white" opacity="0.7"/>
+                            <circle cx="28" cy="44" r="3" fill="white" opacity="0.7"/>
+                            <defs>
+                                <linearGradient id="aiStudioGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#8b5cf6"/>
+                                    <stop offset="50%" style="stop-color:#d946ef"/>
+                                    <stop offset="100%" style="stop-color:#ec4899"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
                     </div>
                     <div class="text-xs text-gray-600">AiStudio</div>
                 </div>
 
                 <!-- Windsurf -->
                 <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-2xl flex items-center justify-center">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                            <path d="M14 2C7.37258 2 2 7.37258 2 14C2 20.6274 7.37258 26 14 26C20.6274 26 26 20.6274 26 14C26 7.37258 20.6274 2 14 2Z" fill="white" stroke="white" stroke-width="2"/>
-                            <path d="M9 14L12.5 17.5L19 11" stroke="cyan" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                            <rect width="56" height="56" rx="12" fill="url(#windsurfGradient)"/>
+                            <path d="M28 14C20.268 14 14 20.268 14 28C14 35.732 20.268 42 28 42C35.732 42 42 35.732 42 28C42 20.268 35.732 14 28 14Z" fill="white" opacity="0.9"/>
+                            <path d="M22 28L26.5 32.5L34 25" stroke="url(#windsurfGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="windsurfGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#06b6d4"/>
+                                    <stop offset="100%" style="stop-color:#3b82f6"/>
+                                </linearGradient>
+                            </defs>
                         </svg>
                     </div>
                     <div class="text-xs text-gray-600">Windsurf</div>
@@ -454,8 +481,21 @@
 
                 <!-- Lovable -->
                 <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-pink-500 via-red-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                        <div class="text-2xl">❤️</div>
+                    <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                            <rect width="56" height="56" rx="12" fill="url(#lovableGradient)"/>
+                            <path d="M28 38C33.5228 38 38 33.5228 38 28C38 22.4772 33.5228 18 28 18C22.4772 18 18 22.4772 18 28C18 33.5228 22.4772 38 28 38Z" fill="white" opacity="0.9"/>
+                            <path d="M23 28C23 28 26 32 28 32C30 32 33 28 33 28" stroke="url(#lovableGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="21" cy="24" r="2" fill="white" opacity="0.8"/>
+                            <circle cx="35" cy="24" r="2" fill="white" opacity="0.8"/>
+                            <defs>
+                                <linearGradient id="lovableGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ec4899"/>
+                                    <stop offset="50%" style="stop-color:#f43f5e"/>
+                                    <stop offset="100%" style="stop-color:#8b5cf6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
                     </div>
                     <div class="text-xs text-gray-600">Lovable</div>
                 </div>
