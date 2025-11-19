@@ -27,32 +27,9 @@
 
     <!-- Custom Styles -->
     <style>
-        /* Custom animations */
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .animate-pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
         /* Tabular numbers for timers */
         .tabular-nums {
             font-variant-numeric: tabular-nums;
-        }
-
-        /* Gradient text */
-        .gradient-text-red {
-            background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Backdrop blur */
-        .backdrop-blur-sm {
-            backdrop-filter: blur(4px);
         }
 
         /* Smooth scrolling */
@@ -62,107 +39,100 @@
     </style>
 </head>
 <body class="bg-white">
-    <!-- Minimal Urgency Banner -->
-    <div class="bg-black text-white py-3 px-4 text-center">
-        <div class="max-w-4xl mx-auto flex items-center justify-center gap-3 text-sm font-medium">
-            <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-            <span class="tracking-wide"><span id="seats-banner" class="font-bold text-red-400">37</span> seats remaining at ₹99</span>
-            <span class="text-gray-400">•</span>
-            <span class="text-gray-300">Price increases to ₹299 at midnight</span>
+    <!-- Simple Urgency Banner -->
+    <div class="bg-gray-50 border-b border-gray-200 py-2 px-4 text-center">
+        <div class="max-w-4xl mx-auto text-sm text-gray-700">
+            <span id="seats-banner" class="font-medium">37</span> seats left • ₹99 (increases to ₹299 at midnight)
         </div>
     </div>
 
-    <!-- Minimal Header with Co-Worker Brand -->
-    <header class="border-b border-gray-100 sticky top-0 z-50 bg-white">
-        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <!-- Co-Worker Logo -->
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-gradient-to-br from-gray-900 to-black rounded-lg flex items-center justify-center">
-                        <span class="text-white text-xs font-bold tracking-wider">CW</span>
-                    </div>
-                    <span class="text-lg font-light text-gray-900 tracking-wide">Co-Worker</span>
+    <!-- Simple Header -->
+    <header class="border-b border-gray-200 bg-white">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 bg-gray-900 rounded flex items-center justify-center">
+                    <span class="text-white text-xs font-bold">CW</span>
                 </div>
+                <span class="text-sm font-medium text-gray-900">Co-Worker</span>
             </div>
-            <nav class="flex items-center gap-8">
-                <div class="hidden md:flex items-center gap-2 text-sm text-gray-500">
-                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                    <span id="builders-joined">63</span> builders enrolled
+            <nav class="flex items-center gap-6">
+                <div class="hidden md:flex items-center gap-2 text-sm text-gray-600">
+                    <div class="w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
+                    <span id="builders-joined">63</span> enrolled
                 </div>
-                <button onclick="document.getElementById('register').scrollIntoView({ behavior: 'smooth' })" class="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors">
+                <button onclick="document.getElementById('register').scrollIntoView({ behavior: 'smooth' })" class="text-sm text-gray-900">
                     Join Masterclass
                 </button>
             </nav>
         </div>
     </header>
 
-    <!-- Minimal Hero Section -->
-    <section class="max-w-4xl mx-auto px-6 py-24 text-center">
-        <!-- Live Badge -->
-        <div class="inline-flex items-center gap-2 bg-black text-white px-3 py-1.5 rounded-full text-xs font-medium mb-8 tracking-wide">
-            <div class="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></div>
+    <!-- Simple Hero Section -->
+    <section class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <!-- Simple Badge -->
+        <div class="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium mb-6">
             LIVE MASTERCLASS
         </div>
 
         <!-- Hero Headline -->
-        <h1 class="text-5xl md:text-6xl font-light text-gray-900 mb-8 leading-tight tracking-tight">
+        <h1 class="text-4xl md:text-5xl font-light text-gray-900 mb-6 leading-tight">
             Build Your First Idea<br/>
-            <span class="font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">In Under 2 Weeks</span><br/>
-            <span class="text-gray-400 font-light">Using AI Tools That Actually Work</span>
+            <span class="font-medium text-red-600">In Under 2 Weeks</span><br/>
+            <span class="text-gray-500">Using AI Tools That Actually Work</span>
         </h1>
 
         <!-- Subheadline -->
-        <p class="text-lg text-gray-600 mb-16 max-w-2xl mx-auto leading-relaxed font-light">
+        <p class="text-base text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
             Stop letting your ideas die in your notes. Learn how to build them with AI in weeks, not months.
         </p>
 
-        <!-- Minimal Social Proof -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <!-- Simple Social Proof -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
             <div class="text-center">
-                <div class="text-2xl font-light text-gray-900">90min</div>
+                <div class="text-xl font-light text-gray-900">90min</div>
                 <div class="text-sm text-gray-500 mt-1">Live Session</div>
             </div>
             <div class="text-center">
-                <div class="text-2xl font-light text-gray-900"><span id="seats-hero">37</span></div>
+                <div class="text-xl font-light text-gray-900"><span id="seats-hero">37</span></div>
                 <div class="text-sm text-gray-500 mt-1">Seats Left</div>
             </div>
             <div class="text-center">
-                <div class="text-2xl font-light text-gray-900">₹99</div>
+                <div class="text-xl font-light text-gray-900">₹99</div>
                 <div class="text-sm text-gray-500 mt-1">Special Price</div>
             </div>
             <div class="text-center">
-                <div class="text-2xl font-light text-gray-900">500+</div>
+                <div class="text-xl font-light text-gray-900">500+</div>
                 <div class="text-sm text-gray-500 mt-1">Builders</div>
             </div>
         </div>
 
-        <!-- Minimal Timer -->
-        <div class="mb-12">
-            <p class="text-sm text-gray-500 mb-4 tracking-wide">Price increases in</p>
-            <div class="flex gap-6 justify-center">
+        <!-- Simple Timer -->
+        <div class="mb-10">
+            <p class="text-sm text-gray-500 mb-3">Price increases in</p>
+            <div class="flex gap-4 justify-center">
                 <div class="text-center">
-                    <div class="text-3xl font-light text-gray-900 tabular-nums" id="hours">23</div>
-                    <div class="text-xs text-gray-400 mt-1 tracking-wider">HOURS</div>
+                    <div class="text-2xl font-light text-gray-900 tabular-nums" id="hours">23</div>
+                    <div class="text-xs text-gray-400 mt-1">HOURS</div>
                 </div>
-                <div class="text-3xl font-light text-gray-300">:</div>
+                <div class="text-2xl font-light text-gray-300">:</div>
                 <div class="text-center">
-                    <div class="text-3xl font-light text-gray-900 tabular-nums" id="minutes">59</div>
-                    <div class="text-xs text-gray-400 mt-1 tracking-wider">MINS</div>
+                    <div class="text-2xl font-light text-gray-900 tabular-nums" id="minutes">59</div>
+                    <div class="text-xs text-gray-400 mt-1">MINS</div>
                 </div>
-                <div class="text-3xl font-light text-gray-300">:</div>
+                <div class="text-2xl font-light text-gray-300">:</div>
                 <div class="text-center">
-                    <div class="text-3xl font-light text-gray-900 tabular-nums" id="seconds">45</div>
-                    <div class="text-xs text-gray-400 mt-1 tracking-wider">SECS</div>
+                    <div class="text-2xl font-light text-gray-900 tabular-nums" id="seconds">45</div>
+                    <div class="text-xs text-gray-400 mt-1">SECS</div>
                 </div>
             </div>
         </div>
 
-        <!-- Minimal CTA -->
-        <div class="flex flex-col items-center gap-6">
-            <button onclick="document.getElementById('register').scrollIntoView({ behavior: 'smooth' })" class="bg-black text-white px-10 py-4 rounded-lg text-base font-medium hover:bg-gray-800 transition-colors tracking-wide">
+        <!-- Simple CTA -->
+        <div class="flex flex-col items-center gap-4">
+            <button onclick="document.getElementById('register').scrollIntoView({ behavior: 'smooth' })" class="bg-black text-white px-8 py-3 rounded text-sm font-medium">
                 Reserve Your Seat for ₹99
             </button>
-            <div class="flex items-center gap-6 text-sm text-gray-500">
+            <div class="flex items-center gap-4 text-sm text-gray-500">
                 <span>30-day guarantee</span>
                 <span>•</span>
                 <span>Secure payment</span>
@@ -171,268 +141,139 @@
             </div>
         </div>
 
-        <!-- Minimal Recent Activity -->
-        <div class="mt-12 flex items-center justify-center gap-3 text-xs text-gray-500">
-            <div class="flex -space-x-1">
-                <div class="w-5 h-5 bg-gray-200 rounded-full border border-white"></div>
-                <div class="w-5 h-5 bg-gray-300 rounded-full border border-white"></div>
-                <div class="w-5 h-5 bg-gray-400 rounded-full border border-white"></div>
-            </div>
+        <!-- Simple Recent Activity -->
+        <div class="mt-8 text-xs text-gray-500">
             <span id="recent-joiner">Rahul M. from Mumbai joined 2 min ago</span>
         </div>
     </section>
 
-    <!-- Enhanced What You Get Section - Advanced Grid System -->
-    <section class="py-32 bg-gradient-to-br from-gray-50 to-white">
-        <div class="max-w-7xl mx-auto px-6">
+    <!-- Simple What You Get Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
             <!-- Section Header -->
-            <div class="text-center mb-24">
-                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-full px-4 py-2 mb-8">
-                    <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span class="text-sm font-medium text-blue-700">Complete Transformation System</span>
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-3 py-1 mb-6">
+                    <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                    <span class="text-sm text-gray-700">Complete Transformation System</span>
                 </div>
-                <h2 class="text-5xl md:text-6xl font-light text-gray-900 mb-6">What You Get</h2>
-                <p class="text-xl text-gray-600 font-light max-w-3xl mx-auto">The complete system to transform your ideas into profitable products in under 2 weeks</p>
+                <h2 class="text-3xl md:text-4xl font-light text-gray-900 mb-4">What You Get</h2>
+                <p class="text-base text-gray-600 max-w-2xl mx-auto">The complete system to transform your ideas into profitable products in under 2 weeks</p>
             </div>
 
-            <!-- Enhanced Grid Layout -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-                <!-- Module 1 & 2 - Left Side -->
-                <div class="space-y-8">
-                    <!-- Module 1 -->
-                    <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300">
-                        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 p-6">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                                        <span class="text-white text-xl font-bold">01</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-2xl font-bold text-white">AI Agent Playbook</h3>
-                                        <p class="text-blue-100 text-sm">Master the tools, not the theory</p>
-                                    </div>
+            <!-- Simple Grid Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <!-- Module 1 -->
+                <div class="bg-white rounded-lg border border-gray-200">
+                    <div class="bg-gray-900 p-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-gray-800 rounded flex items-center justify-center">
+                                    <span class="text-white text-sm font-bold">01</span>
                                 </div>
-                                <div class="text-3xl font-bold text-white">📚</div>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-6 mb-8">
-                                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-4">
-                                    <div class="text-2xl font-bold text-blue-600 mb-2">6+</div>
-                                    <div class="text-sm text-gray-700">AI tools mastered</div>
-                                </div>
-                                <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-4">
-                                    <div class="text-2xl font-bold text-purple-600 mb-2">50+</div>
-                                    <div class="text-sm text-gray-700">Ready prompts</div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">AI Agent Playbook</h3>
+                                    <p class="text-gray-300 text-sm">Master the tools, not the theory</p>
                                 </div>
                             </div>
-                            <div class="space-y-4">
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900 mb-1">Tool Selection Matrix</h4>
-                                        <p class="text-sm text-gray-600">When to use Cursor vs v0 vs Windsurf vs AiStudio</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900 mb-1">Prompt Engineering</h4>
-                                        <p class="text-sm text-gray-600">50+ battle-tested prompts that actually work</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900 mb-1">Speed Optimization</h4>
-                                        <p class="text-sm text-gray-600">Techniques to build 10x faster than traditional methods</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="text-2xl">📚</div>
                         </div>
                     </div>
-
-                    <!-- Module 2 -->
-                    <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-6">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                                        <span class="text-white text-xl font-bold">02</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-2xl font-bold text-white">Live Build Session</h3>
-                                        <p class="text-purple-100 text-sm">Watch me build a SaaS from scratch</p>
-                                    </div>
-                                </div>
-                                <div class="text-3xl font-bold text-white">🚀</div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-50 rounded-lg p-3">
+                                <div class="text-xl font-bold text-gray-900 mb-1">6+</div>
+                                <div class="text-sm text-gray-600">AI tools mastered</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-3">
+                                <div class="text-xl font-bold text-gray-900 mb-1">50+</div>
+                                <div class="text-sm text-gray-600">Ready prompts</div>
                             </div>
                         </div>
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-6 mb-8">
-                                <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-4">
-                                    <div class="text-2xl font-bold text-purple-600 mb-2">90min</div>
-                                    <div class="text-sm text-gray-700">Live coding</div>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <div class="w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
                                 </div>
-                                <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-4">
-                                    <div class="text-2xl font-bold text-orange-600 mb-2">100%</div>
-                                    <div class="text-sm text-gray-700">Real work</div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Tool Selection Matrix</h4>
+                                    <p class="text-sm text-gray-600">When to use Cursor vs v0 vs Windsurf vs AiStudio</p>
                                 </div>
                             </div>
-                            <div class="space-y-4">
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900 mb-1">Database & Auth Setup</h4>
-                                        <p class="text-sm text-gray-600">Complete SaaS infrastructure in minutes, not months</p>
-                                    </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
                                 </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900 mb-1">Payment Integration</h4>
-                                        <p class="text-sm text-gray-600">Stripe/Razorpay setup in under 5 minutes</p>
-                                    </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Prompt Engineering</h4>
+                                    <p class="text-sm text-gray-600">50+ battle-tested prompts that actually work</p>
                                 </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900 mb-1">Real Debugging</h4>
-                                        <p class="text-sm text-gray-600">Watch me solve problems live - no cuts, no edits</p>
-                                    </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Speed Optimization</h4>
+                                    <p class="text-sm text-gray-600">Techniques to build 10x faster than traditional methods</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Module 3 & 4 - Right Side -->
-                <div class="space-y-8">
-                    <!-- Module 3 -->
-                    <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300">
-                        <div class="bg-gradient-to-r from-green-600 to-emerald-600 p-6">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                                        <span class="text-white text-xl font-bold">03</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-2xl font-bold text-white">2-Week Blueprint</h3>
-                                        <p class="text-green-100 text-sm">Day-by-day launch plan</p>
-                                    </div>
+                <!-- Module 2 -->
+                <div class="bg-white rounded-lg border border-gray-200">
+                    <div class="bg-gray-900 p-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-gray-800 rounded flex items-center justify-center">
+                                    <span class="text-white text-sm font-bold">02</span>
                                 </div>
-                                <div class="text-3xl font-bold text-white">📅</div>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-6 mb-8">
-                                <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-4">
-                                    <div class="text-2xl font-bold text-green-600 mb-2">14</div>
-                                    <div class="text-sm text-gray-700">Days to launch</div>
-                                </div>
-                                <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-4">
-                                    <div class="text-2xl font-bold text-blue-600 mb-2">100+</div>
-                                    <div class="text-sm text-gray-700">First users</div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Live Build Session</h3>
+                                    <p class="text-gray-300 text-sm">Watch me build a SaaS from scratch</p>
                                 </div>
                             </div>
-                            <div class="space-y-4">
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900 mb-1">Week 1: Validation</h4>
-                                        <p class="text-sm text-gray-600">Idea validation, competitor analysis, market research</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900 mb-1">Week 2: Launch</h4>
-                                        <p class="text-sm text-gray-600">Marketing, launch day strategy, first 100 users</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900 mb-1">Growth Tactics</h4>
-                                        <p class="text-sm text-gray-600">Reddit, Twitter, LinkedIn, Product Hunt strategies</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="text-2xl">🚀</div>
                         </div>
                     </div>
-
-                    <!-- Module 4 -->
-                    <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300">
-                        <div class="bg-gradient-to-r from-orange-600 to-red-600 p-6">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                                        <span class="text-white text-xl font-bold">04</span>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-2xl font-bold text-white">Builder Community</h3>
-                                        <p class="text-orange-100 text-sm">Lifetime support network</p>
-                                    </div>
-                                </div>
-                                <div class="text-3xl font-bold text-white">👥</div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-50 rounded-lg p-3">
+                                <div class="text-xl font-bold text-gray-900 mb-1">1</div>
+                                <div class="text-sm text-gray-600">Full SaaS built</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-3">
+                                <div class="text-xl font-bold text-gray-900 mb-1">90min</div>
+                                <div class="text-sm text-gray-600">Live session</div>
                             </div>
                         </div>
-                        <div class="p-8">
-                            <div class="grid grid-cols-2 gap-6 mb-8">
-                                <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-4">
-                                    <div class="text-2xl font-bold text-orange-600 mb-2">500+</div>
-                                    <div class="text-sm text-gray-700">AI builders</div>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <div class="w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
                                 </div>
-                                <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-4">
-                                    <div class="text-2xl font-bold text-purple-600 mb-2">24/7</div>
-                                    <div class="text-sm text-gray-700">Discord access</div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Database Setup</h4>
+                                    <p class="text-sm text-gray-600">Setup and connect databases with AI in 5 minutes</p>
                                 </div>
                             </div>
-                            <div class="space-y-4">
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900 mb-1">Private Discord Server</h4>
-                                        <p class="text-sm text-gray-600">Ask questions, get feedback, find collaborators</p>
-                                    </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
                                 </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900 mb-1">Weekly Office Hours</h4>
-                                        <p class="text-sm text-gray-600">Live Q&A sessions, project reviews, strategy calls</p>
-                                    </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Payment Integration</h4>
+                                    <p class="text-sm text-gray-600">Add Stripe/PayPal with AI assistance</p>
                                 </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900 mb-1">Opportunities Network</h4>
-                                        <p class="text-sm text-gray-600">Job opportunities, partnerships, investment deals</p>
-                                    </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Real-time Debugging</h4>
+                                    <p class="text-sm text-gray-600">Watch how to fix bugs with AI instantly</p>
                                 </div>
                             </div>
                         </div>
@@ -440,93 +281,120 @@
                 </div>
             </div>
 
-            <!-- Enhanced Value Proposition with Advanced Grid -->
-            <div class="bg-gradient-to-r from-black via-gray-900 to-black rounded-3xl p-12 text-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
-                <div class="relative z-10">
-                    <!-- Main Value Grid -->
-                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-12">
-                        <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                            <div class="text-5xl font-bold text-white mb-2">₹50,000</div>
-                            <div class="text-white/80 text-sm mb-3">Total Value</div>
-                            <div class="space-y-1">
-                                <div class="text-xs text-white/60">4 Course Modules</div>
-                                <div class="text-xs text-white/60">Community Access</div>
-                                <div class="text-xs text-white/60">Live Support</div>
+            <!-- Modules 3 & 4 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Module 3 -->
+                <div class="bg-white rounded-lg border border-gray-200">
+                    <div class="bg-gray-900 p-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-gray-800 rounded flex items-center justify-center">
+                                    <span class="text-white text-sm font-bold">03</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">2-Week Launch Blueprint</h3>
+                                    <p class="text-gray-300 text-sm">From idea to first paying customer</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="bg-gradient-to-br from-green-500/20 to-green-600/5 backdrop-blur-sm rounded-2xl p-6 border border-green-400/20">
-                            <div class="text-5xl font-bold text-green-400 mb-2">₹99</div>
-                            <div class="text-white/80 text-sm mb-3">Your Investment</div>
-                            <div class="text-xs text-green-400 font-medium">Limited Time Offer</div>
-                        </div>
-                        <div class="bg-gradient-to-br from-orange-500/20 to-orange-600/5 backdrop-blur-sm rounded-2xl p-6 border border-orange-400/20">
-                            <div class="text-5xl font-bold text-orange-400 mb-2">99.8%</div>
-                            <div class="text-white/80 text-sm mb-3">DISCOUNT</div>
-                            <div class="text-xs text-orange-400 font-medium">Today Only</div>
-                        </div>
-                        <div class="bg-gradient-to-br from-purple-500/20 to-purple-600/5 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/20">
-                            <div class="text-5xl font-bold text-purple-400 mb-2">30</div>
-                            <div class="text-white/80 text-sm mb-3">DAYS</div>
-                            <div class="text-xs text-purple-400 font-medium">Money-Back Guarantee</div>
+                            <div class="text-2xl">🎯</div>
                         </div>
                     </div>
-
-                    <!-- Enhanced Why Section with Grid -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-                            <h3 class="text-2xl font-bold text-white mb-6 text-left">Why 99.8% OFF?</h3>
-                            <p class="text-white/90 leading-relaxed mb-6 text-left">
-                                I'm building an army of Indian builders who ship products and make money with AI. This isn't about making money from the course - it's about creating the next generation of successful founders who can compete globally.
-                            </p>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="flex items-center gap-3 text-green-400">
-                                    <div class="w-5 h-5 bg-green-400 rounded-full flex-shrink-0"></div>
-                                    <span class="text-sm">Real Expertise</span>
+                    <div class="p-6">
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-50 rounded-lg p-3">
+                                <div class="text-xl font-bold text-gray-900 mb-1">14</div>
+                                <div class="text-sm text-gray-600">Day timeline</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-3">
+                                <div class="text-xl font-bold text-gray-900 mb-1">100</div>
+                                <div class="text-sm text-gray-600">First users target</div>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <div class="w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
                                 </div>
-                                <div class="flex items-center gap-3 text-green-400">
-                                    <div class="w-5 h-5 bg-green-400 rounded-full flex-shrink-0"></div>
-                                    <span class="text-sm">Proven Results</span>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Pre-launch Checklist</h4>
+                                    <p class="text-sm text-gray-600">Everything you need before going live</p>
                                 </div>
-                                <div class="flex items-center gap-3 text-green-400">
-                                    <div class="w-5 h-5 bg-green-400 rounded-full flex-shrink-0"></div>
-                                    <span class="text-sm">Lifetime Support</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
                                 </div>
-                                <div class="flex items-center gap-3 text-green-400">
-                                    <div class="w-5 h-5 bg-green-400 rounded-full flex-shrink-0"></div>
-                                    <span class="text-sm">Community Access</span>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Launch Day Strategy</h4>
+                                    <p class="text-sm text-gray-600">Step-by-step launch plan for maximum impact</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Growth Hacking Tactics</h4>
+                                    <p class="text-sm text-gray-600">AI-powered marketing and growth strategies</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gradient-to-br from-blue-500/20 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/20">
-                            <h3 class="text-2xl font-bold text-white mb-6 text-left">What Makes This Different</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-blue-400 rounded-sm"></div>
-                                    </div>
-                                    <div class="text-left">
-                                        <div class="text-white font-medium mb-1">Live Build Sessions</div>
-                                        <div class="text-white/70 text-sm">Watch me build products from scratch with AI</div>
-                                    </div>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="bg-white rounded-lg border border-gray-200">
+                    <div class="bg-gray-900 p-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-gray-800 rounded flex items-center justify-center">
+                                    <span class="text-white text-sm font-bold">04</span>
                                 </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-purple-400 rounded-sm"></div>
-                                    </div>
-                                    <div class="text-left">
-                                        <div class="text-white font-medium mb-1">Real-World Projects</div>
-                                        <div class="text-white/70 text-sm">Build actual apps, not just theory</div>
-                                    </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Builder Community</h3>
+                                    <p class="text-gray-300 text-sm">Network with fellow AI builders</p>
                                 </div>
-                                <div class="flex items-start gap-3">
-                                    <div class="w-6 h-6 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <div class="w-3 h-3 bg-green-400 rounded-sm"></div>
-                                    </div>
-                                    <div class="text-left">
-                                        <div class="text-white font-medium mb-1">Job Opportunities</div>
-                                        <div class="text-white/70 text-sm">Get access to exclusive AI builder roles</div>
-                                    </div>
+                            </div>
+                            <div class="text-2xl">👥</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-50 rounded-lg p-3">
+                                <div class="text-xl font-bold text-gray-900 mb-1">500+</div>
+                                <div class="text-sm text-gray-600">AI builders</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-3">
+                                <div class="text-xl font-bold text-gray-900 mb-1">24/7</div>
+                                <div class="text-sm text-gray-600">Discord access</div>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <div class="w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Private Discord Server</h4>
+                                    <p class="text-sm text-gray-600">Ask questions, get feedback, find collaborators</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Weekly Office Hours</h4>
+                                    <p class="text-sm text-gray-600">Live Q&A sessions, project reviews, strategy calls</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Opportunities Network</h4>
+                                    <p class="text-sm text-gray-600">Job opportunities, partnerships, investment deals</p>
                                 </div>
                             </div>
                         </div>
@@ -536,160 +404,142 @@
         </div>
     </section>
 
-    <!-- Enhanced Comparison Section with Advanced Grid -->
-    <section class="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl font-light text-gray-900 mb-6">Then vs Now</h2>
-                <p class="text-xl text-gray-600 font-light max-w-2xl mx-auto">The AI revolution has changed how we build products forever. What took years now takes weeks.</p>
+    <!-- Simple Value Proposition -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="bg-gray-50 rounded-lg p-8 text-center">
+                <!-- Simple Value Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900 mb-2">₹50,000</div>
+                        <div class="text-sm text-gray-600 mb-3">Total Value</div>
+                        <div class="text-xs text-gray-500">4 modules • Community • Support</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">₹99</div>
+                        <div class="text-sm text-gray-600 mb-3">Your Investment</div>
+                        <div class="text-xs text-gray-500">Limited time</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-red-600 mb-2">99.8%</div>
+                        <div class="text-sm text-gray-600 mb-3">DISCOUNT</div>
+                        <div class="text-xs text-gray-500">Today only</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">30</div>
+                        <div class="text-sm text-gray-600 mb-3">DAYS</div>
+                        <div class="text-xs text-gray-500">Money-back guarantee</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 max-w-2xl mx-auto">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Why 99.8% OFF?</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        I'm building an army of Indian builders who ship products and make money with AI. This isn't about making money from the course - it's about creating the next generation of successful founders who can compete globally.
+                    </p>
+                    <div class="flex justify-center gap-6 text-sm">
+                        <div class="flex items-center gap-2 text-gray-600">
+                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                            <span>Real expertise</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-600">
+                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                            <span>Proven results</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-600">
+                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                            <span>Lifetime support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Comparison Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-light text-gray-900 mb-4">Then vs Now</h2>
+                <p class="text-lg text-gray-600">The way we build has changed forever</p>
             </div>
 
-            <!-- Main Comparison Grid -->
-            <div class="grid lg:grid-cols-2 gap-12 mb-16">
-                <!-- Then Column -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-200 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-red-500 text-white px-4 py-2 rounded-bl-2xl text-sm font-medium">
-                        The Old Way
-                    </div>
-                    <div class="flex items-center justify-between mb-10">
-                        <h3 class="text-2xl font-semibold text-gray-900">Traditional Development</h3>
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Then -->
+                <div class="bg-white rounded-lg border border-gray-200 p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-medium text-gray-900">Traditional Development</h3>
                         <div class="text-right">
-                            <div class="text-3xl font-bold text-red-500">12+</div>
+                            <div class="text-2xl font-bold text-red-600">12+</div>
                             <div class="text-sm text-gray-500">months</div>
                         </div>
                     </div>
 
-                    <!-- Timeline Grid -->
-                    <div class="space-y-6">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="bg-red-50 rounded-xl p-4 border border-red-100">
-                                <div class="text-red-600 font-semibold mb-2">📚 Learn Coding</div>
-                                <div class="text-2xl font-bold text-red-700 mb-1">6 months</div>
-                                <div class="text-sm text-gray-600">JavaScript, React, databases</div>
-                            </div>
-                            <div class="bg-orange-50 rounded-xl p-4 border border-orange-100">
-                                <div class="text-orange-600 font-semibold mb-2">🔧 Build Features</div>
-                                <div class="text-2xl font-bold text-orange-700 mb-1">3 months</div>
-                                <div class="text-sm text-gray-600">Frontend, backend, APIs</div>
-                            </div>
-                            <div class="bg-yellow-50 rounded-xl p-4 border border-yellow-100">
-                                <div class="text-yellow-600 font-semibold mb-2">🐛 Debug Everything</div>
-                                <div class="text-2xl font-bold text-yellow-700 mb-1">2 months</div>
-                                <div class="text-sm text-gray-600">Bugs, testing, fixes</div>
-                            </div>
-                            <div class="bg-amber-50 rounded-xl p-4 border border-amber-100">
-                                <div class="text-amber-600 font-semibold mb-2">⚙️ Setup Integrations</div>
-                                <div class="text-2xl font-bold text-amber-700 mb-1">1 month</div>
-                                <div class="text-sm text-gray-600">Payments, emails, hosting</div>
-                            </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                            <span class="text-gray-700">Learn coding: 6 months</span>
                         </div>
-
-                        <!-- Pain Points -->
-                        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                            <div class="text-gray-700 font-medium mb-4">Main Challenges:</div>
-                            <div class="space-y-3">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-                                    <span class="text-gray-600">High learning curve</span>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-                                    <span class="text-gray-600">Expensive developers</span>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-                                    <span class="text-gray-600">Slow time to market</span>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-                                    <span class="text-gray-600">Technical debt</span>
-                                </div>
-                            </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                            <span class="text-gray-700">Build features: 3 months</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                            <span class="text-gray-700">Debug everything: 2 months</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                            <span class="text-gray-700">Setup integrations: 1 month</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Now Column -->
-                <div class="bg-gradient-to-br from-black via-gray-900 to-black text-white rounded-3xl p-8 shadow-2xl relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
-                    <div class="absolute top-0 right-0 bg-green-500 text-black px-4 py-2 rounded-bl-2xl text-sm font-medium z-10">
-                        The AI Way
-                    </div>
-                    <div class="relative z-10">
-                        <div class="flex items-center justify-between mb-10">
-                            <h3 class="text-2xl font-semibold">AI-Powered Development</h3>
-                            <div class="text-right">
-                                <div class="text-3xl font-bold text-green-400">2</div>
-                                <div class="text-sm text-gray-400">weeks</div>
-                            </div>
+                <!-- Now -->
+                <div class="bg-gray-900 text-white rounded-lg p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-medium">AI-Powered Development</h3>
+                        <div class="text-right">
+                            <div class="text-2xl font-bold text-green-400">2</div>
+                            <div class="text-sm text-gray-400">weeks</div>
                         </div>
+                    </div>
 
-                        <!-- Timeline Grid -->
-                        <div class="space-y-6">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div class="bg-gradient-to-br from-green-500/20 to-green-600/10 rounded-xl p-4 border border-green-400/30 backdrop-blur-sm">
-                                    <div class="text-green-400 font-semibold mb-2">🤖 Learn AI Tools</div>
-                                    <div class="text-2xl font-bold text-green-300 mb-1">2 days</div>
-                                    <div class="text-sm text-gray-300">Cursor, v0, Windsurf</div>
-                                </div>
-                                <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-xl p-4 border border-blue-400/30 backdrop-blur-sm">
-                                    <div class="text-blue-400 font-semibold mb-2">⚡ Build with AI</div>
-                                    <div class="text-2xl font-bold text-blue-300 mb-1">1 week</div>
-                                    <div class="text-sm text-gray-300">Full app development</div>
-                                </div>
-                                <div class="bg-gradient-to-br from-purple-500/20 to-purple-600/10 rounded-xl p-4 border border-purple-400/30 backdrop-blur-sm">
-                                    <div class="text-purple-400 font-semibold mb-2">🚀 Deploy & Launch</div>
-                                    <div class="text-2xl font-bold text-purple-300 mb-1">2 days</div>
-                                    <div class="text-sm text-gray-300">Production ready</div>
-                                </div>
-                                <div class="bg-gradient-to-br from-orange-500/20 to-orange-600/10 rounded-xl p-4 border border-orange-400/30 backdrop-blur-sm">
-                                    <div class="text-orange-400 font-semibold mb-2">💰 Start Making Money</div>
-                                    <div class="text-2xl font-bold text-orange-300 mb-1">Day 15</div>
-                                    <div class="text-sm text-gray-300">First revenue</div>
-                                </div>
-                            </div>
-
-                            <!-- Benefits -->
-                            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                                <div class="text-white font-medium mb-4">Key Advantages:</div>
-                                <div class="space-y-3">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-200">Zero coding experience needed</span>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
-                                        <span class="text-gray-200">Build anything you can imagine</span>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
-                                        <span class="text-gray-200">Ship in days, not years</span>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
-                                        <span class="text-gray-200">Join the AI revolution</span>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                            <span>Learn AI tools: 2 days</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                            <span>Build with AI: 1 week</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                            <span>AI fixes bugs: instantly</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                            <span>Deploy: 5 days</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bottom Stats Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-100">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">24x</div>
+            <!-- Bottom Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg border border-gray-200 p-6 text-center">
+                    <div class="text-2xl font-bold text-blue-600 mb-2">24x</div>
                     <div class="text-gray-700 font-medium">Faster Development</div>
                     <div class="text-sm text-gray-500 mt-2">What took years now takes weeks</div>
                 </div>
-                <div class="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-100">
-                    <div class="text-4xl font-bold text-green-600 mb-2">0%</div>
+                <div class="bg-white rounded-lg border border-gray-200 p-6 text-center">
+                    <div class="text-2xl font-bold text-green-600 mb-2">0%</div>
                     <div class="text-gray-700 font-medium">Coding Required</div>
                     <div class="text-sm text-gray-500 mt-2">Focus on ideas, not syntax</div>
                 </div>
-                <div class="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-100">
-                    <div class="text-4xl font-bold text-purple-600 mb-2">100%</div>
+                <div class="bg-white rounded-lg border border-gray-200 p-6 text-center">
+                    <div class="text-2xl font-bold text-purple-600 mb-2">100%</div>
                     <div class="text-gray-700 font-medium">Success Rate</div>
                     <div class="text-sm text-gray-500 mt-2">When you follow the system</div>
                 </div>
@@ -697,37 +547,31 @@
         </div>
     </section>
 
-    <!-- Enhanced AI Tools Section with Advanced Grid -->
-    <section class="py-24 bg-gradient-to-br from-white to-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl font-light text-gray-900 mb-6">Modern AI Stack</h2>
-                <p class="text-xl text-gray-600 font-light max-w-3xl mx-auto">The exact AI tools and platforms you'll master to build any product you can imagine</p>
+    <!-- Simple AI Tools Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-light text-gray-900 mb-4">Modern AI Stack</h2>
+                <p class="text-lg text-gray-600">The exact AI tools you'll master to build any product</p>
             </div>
 
-            <!-- Main Tools Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-20">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
                 <!-- timetoShip -->
-                <div class="group text-center">
-                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl group-hover:shadow-lg transition-all duration-300" style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 400; color: rgb(23, 23, 23); font-size: 16px;">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center bg-gray-100 rounded-lg" style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 400; color: rgb(23, 23, 23); font-size: 14px;">
                         timetoShip
                     </div>
                     <div class="font-medium text-gray-900 mb-1">timetoShip</div>
                     <div class="text-xs text-gray-600">Startup Templates</div>
                 </div>
+
                 <!-- Cursor -->
-                <div class="group text-center">
-                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-gray-900 to-black rounded-2xl group-hover:shadow-lg transition-all duration-300">
-                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                            <circle cx="28" cy="28" r="28" fill="url(#cursorGradient)"/>
-                            <path d="M16 16L20 40L28 35L36 40L40 16L28 24L16 16Z" fill="white"/>
-                            <path d="M20 40L28 35L36 40" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            <defs>
-                                <linearGradient id="cursorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#000000"/>
-                                    <stop offset="100%" style="stop-color:#1f2937"/>
-                                </linearGradient>
-                            </defs>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center bg-gray-900 rounded-lg">
+                        <svg width="32" height="32" viewBox="0 0 56 56" fill="none">
+                            <circle cx="28" cy="28" r="28" fill="white"/>
+                            <path d="M16 16L20 40L28 35L36 40L40 16L28 24L16 16Z" fill="black"/>
+                            <path d="M20 40L28 35L36 40" stroke="black" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
                     <div class="font-medium text-gray-900 mb-1">Cursor</div>
@@ -735,11 +579,11 @@
                 </div>
 
                 <!-- v0.dev -->
-                <div class="group text-center">
-                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl group-hover:shadow-lg transition-all duration-300">
-                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                            <rect width="56" height="56" rx="12" fill="black"/>
-                            <text x="28" y="38" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle" fill="white">v0</text>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center bg-gray-100 rounded-lg">
+                        <svg width="32" height="32" viewBox="0 0 56 56" fill="none">
+                            <rect width="56" height="56" rx="8" fill="black"/>
+                            <text x="28" y="38" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="white">v0</text>
                         </svg>
                     </div>
                     <div class="font-medium text-gray-900 mb-1">v0.dev</div>
@@ -747,22 +591,14 @@
                 </div>
 
                 <!-- AiStudio -->
-                <div class="group text-center">
-                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl group-hover:shadow-lg transition-all duration-300">
-                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                            <rect width="56" height="56" rx="12" fill="url(#aiStudioGradient)"/>
-                            <circle cx="28" cy="20" r="8" fill="white" opacity="0.9"/>
-                            <circle cx="28" cy="20" r="5" fill="url(#aiStudioGradient)"/>
-                            <circle cx="20" cy="36" r="3" fill="white" opacity="0.7"/>
-                            <circle cx="36" cy="36" r="3" fill="white" opacity="0.7"/>
-                            <circle cx="28" cy="44" r="3" fill="white" opacity="0.7"/>
-                            <defs>
-                                <linearGradient id="aiStudioGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#8b5cf6"/>
-                                    <stop offset="50%" style="stop-color:#d946ef"/>
-                                    <stop offset="100%" style="stop-color:#ec4899"/>
-                                </linearGradient>
-                            </defs>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center bg-purple-100 rounded-lg">
+                        <svg width="32" height="32" viewBox="0 0 56 56" fill="none">
+                            <rect width="56" height="56" rx="8" fill="#8b5cf6"/>
+                            <circle cx="28" cy="20" r="6" fill="white"/>
+                            <circle cx="20" cy="36" r="2" fill="white"/>
+                            <circle cx="36" cy="36" r="2" fill="white"/>
+                            <circle cx="28" cy="44" r="2" fill="white"/>
                         </svg>
                     </div>
                     <div class="font-medium text-gray-900 mb-1">AiStudio</div>
@@ -770,18 +606,12 @@
                 </div>
 
                 <!-- Windsurf -->
-                <div class="group text-center">
-                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl group-hover:shadow-lg transition-all duration-300">
-                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                            <rect width="56" height="56" rx="12" fill="url(#windsurfGradient)"/>
-                            <path d="M28 14C20.268 14 14 20.268 14 28C14 35.732 20.268 42 28 42C35.732 42 42 35.732 42 28C42 20.268 35.732 14 28 14Z" fill="white" opacity="0.9"/>
-                            <path d="M22 28L26.5 32.5L34 25" stroke="url(#windsurfGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            <defs>
-                                <linearGradient id="windsurfGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#06b6d4"/>
-                                    <stop offset="100%" style="stop-color:#3b82f6"/>
-                                </linearGradient>
-                            </defs>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center bg-blue-100 rounded-lg">
+                        <svg width="32" height="32" viewBox="0 0 56 56" fill="none">
+                            <rect width="56" height="56" rx="8" fill="#06b6d4"/>
+                            <circle cx="28" cy="28" r="12" fill="white"/>
+                            <path d="M22 28L26.5 32.5L34 25" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <div class="font-medium text-gray-900 mb-1">Windsurf</div>
@@ -789,21 +619,12 @@
                 </div>
 
                 <!-- Lovable -->
-                <div class="group text-center">
-                    <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-pink-100 to-purple-100 rounded-2xl group-hover:shadow-lg transition-all duration-300">
-                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                            <rect width="56" height="56" rx="12" fill="url(#lovableGradient)"/>
-                            <path d="M28 38C33.5228 38 38 33.5228 38 28C38 22.4772 33.5228 18 28 18C22.4772 18 18 22.4772 18 28C18 33.5228 22.4772 38 28 38Z" fill="white" opacity="0.9"/>
-                            <path d="M23 28C23 28 26 32 28 32C30 32 33 28 33 28" stroke="url(#lovableGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="21" cy="24" r="2" fill="white" opacity="0.8"/>
-                            <circle cx="35" cy="24" r="2" fill="white" opacity="0.8"/>
-                            <defs>
-                                <linearGradient id="lovableGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#ec4899"/>
-                                    <stop offset="50%" style="stop-color:#f43f5e"/>
-                                    <stop offset="100%" style="stop-color:#8b5cf6"/>
-                                </linearGradient>
-                            </defs>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center bg-pink-100 rounded-lg">
+                        <svg width="32" height="32" viewBox="0 0 56 56" fill="none">
+                            <rect width="56" height="56" rx="8" fill="#ec4899"/>
+                            <circle cx="28" cy="28" r="10" fill="white"/>
+                            <path d="M23 28C23 28 26 32 28 32C30 32 33 28 33 28" stroke="#ec4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <div class="font-medium text-gray-900 mb-1">Lovable</div>
@@ -811,677 +632,286 @@
                 </div>
             </div>
 
-            <!-- Enhanced Workflow Section with Grid -->
-            <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-12 shadow-lg border border-gray-100">
-                <h3 class="text-2xl font-semibold text-gray-900 text-center mb-12">Your AI-Powered Building Journey</h3>
+            <!-- Simple Workflow -->
+            <div class="bg-gray-50 rounded-lg p-8 text-center">
+                <h3 class="text-lg font-semibold text-gray-900 mb-8">Your AI-Powered Building Journey</h3>
 
-                <!-- Workflow Steps Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                    <div class="text-center group">
-                        <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center text-4xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-lg flex items-center justify-center text-2xl">
                             💡
                         </div>
-                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Idea Validation</h4>
-                        <p class="text-sm text-gray-600">Test your concept with AI market research</p>
-                        <div class="mt-4 text-xs font-medium text-orange-600">Day 1-2</div>
+                        <h4 class="font-medium text-gray-900 mb-2">Idea Validation</h4>
+                        <p class="text-sm text-gray-600 mb-2">Test your concept with AI market research</p>
+                        <div class="text-xs font-medium text-yellow-700">Day 1-2</div>
                     </div>
 
-                    <div class="text-center group">
-                        <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center text-4xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-lg flex items-center justify-center text-2xl">
                             🤖
                         </div>
-                        <h4 class="text-lg font-semibold text-gray-900 mb-2">AI Development</h4>
-                        <p class="text-sm text-gray-600">Build your product with Cursor, v0, Windsurf</p>
-                        <div class="mt-4 text-xs font-medium text-blue-600">Day 3-10</div>
+                        <h4 class="font-medium text-gray-900 mb-2">AI Development</h4>
+                        <p class="text-sm text-gray-600 mb-2">Build your product with Cursor, v0, Windsurf</p>
+                        <div class="text-xs font-medium text-blue-700">Day 3-10</div>
                     </div>
 
-                    <div class="text-center group">
-                        <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center text-4xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-lg flex items-center justify-center text-2xl">
                             ⚡
                         </div>
-                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Rapid Testing</h4>
-                        <p class="text-sm text-gray-600">AI-powered debugging and optimization</p>
-                        <div class="mt-4 text-xs font-medium text-green-600">Day 11-13</div>
+                        <h4 class="font-medium text-gray-900 mb-2">Rapid Testing</h4>
+                        <p class="text-sm text-gray-600 mb-2">AI-powered debugging and optimization</p>
+                        <div class="text-xs font-medium text-green-700">Day 11-13</div>
                     </div>
 
-                    <div class="text-center group">
-                        <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center text-4xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-lg flex items-center justify-center text-2xl">
                             🚀
                         </div>
-                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Launch & Scale</h4>
-                        <p class="text-sm text-gray-600">Deploy and get your first users</p>
-                        <div class="mt-4 text-xs font-medium text-purple-600">Day 14-15</div>
-                    </div>
-                </div>
-
-                <!-- Success Stats -->
-                <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                        <div>
-                            <div class="text-3xl font-bold text-green-700 mb-2">90%</div>
-                            <div class="text-sm text-gray-700">Students ship their first product</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold text-green-700 mb-2">2 Weeks</div>
-                            <div class="text-sm text-gray-700">Average time to launch</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold text-green-700 mb-2">$1000+</div>
-                            <div class="text-sm text-gray-700">Average first month revenue</div>
-                        </div>
+                        <h4 class="font-medium text-gray-900 mb-2">Launch & Scale</h4>
+                        <p class="text-sm text-gray-600 mb-2">Deploy and get your first users</p>
+                        <div class="text-xs font-medium text-purple-700">Day 14-15</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Risk Reversal Section - High Conversion -->
-    <section class="py-24 bg-gradient-to-r from-green-600 to-emerald-600">
+    <!-- Simple Risk Reversal Section -->
+    <section class="py-20 bg-gray-50">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-light text-white mb-4">You Have Zero Risk</h2>
-                <p class="text-lg text-white/90 font-light">I guarantee this changes how you build forever</p>
+                <h2 class="text-3xl md:text-4xl font-light text-gray-900 mb-4">You Have Zero Risk</h2>
+                <p class="text-lg text-gray-600">I guarantee this changes how you build forever</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white rounded-lg border border-gray-200 p-6 text-center">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
                             <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-medium text-white mb-2">30-Day Guarantee</h3>
-                    <p class="text-white/80 text-sm">Not worth it? Full refund. No questions asked.</p>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">30-Day Guarantee</h3>
+                    <p class="text-gray-600 text-sm">Not worth it? Full refund. No questions asked.</p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <div class="bg-white rounded-lg border border-gray-200 p-6 text-center">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
                             <circle cx="12" cy="12" r="10"/>
                             <polyline points="12,6 12,12 16,14"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-medium text-white mb-2">Lifetime Access</h3>
-                    <p class="text-white/80 text-sm">Watch replay anytime. Forever.</p>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Lifetime Access</h3>
+                    <p class="text-gray-600 text-sm">All updates, new tools, and future content included.</p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                <div class="bg-white rounded-lg border border-gray-200 p-6 text-center">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2">
+                            <path d="M9 11l3 3L22 4"/>
+                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-medium text-white mb-2">Builder Community</h3>
-                    <p class="text-white/80 text-sm">500+ AI builders network and support</p>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Proven Results</h3>
+                    <p class="text-gray-600 text-sm">90% of students ship their first product within 2 weeks.</p>
                 </div>
             </div>
 
-            <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 text-center">
-                <h3 class="text-2xl font-medium text-white mb-4">The Only Risk Is NOT Joining</h3>
-                <p class="text-white/90 text-lg max-w-2xl mx-auto">
-                    While you're still "thinking" about your ideas, your competition is already building and launching with AI tools.
-                    The question isn't whether this works - it's whether you want to be left behind.
-                </p>
-                <div class="mt-6 inline-flex items-center gap-3 bg-white/10 px-4 py-2 rounded-full">
-                    <div class="w-2 h-2 bg-white rounded-full"></div>
-                    <span class="text-white text-sm">37 seats left at ₹99 → ₹299 tonight</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enhanced Social Proof Section - Advanced Grid -->
-    <section class="py-32 bg-gradient-to-br from-white to-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <!-- Section Header -->
-            <div class="text-center mb-20">
-                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-full px-4 py-2 mb-8">
-                    <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span class="text-sm font-medium text-green-700">Real Success Stories</span>
-                </div>
-                <h2 class="text-5xl md:text-6xl font-light text-gray-900 mb-6">Builder Results</h2>
-                <p class="text-xl text-gray-600 font-light max-w-3xl mx-auto">Join 500+ builders who are already shipping with AI tools</p>
-            </div>
-
-            <!-- Stats Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-gray-900 mb-2">₹2.1M+</div>
-                    <div class="text-sm text-gray-600">Revenue generated</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-gray-900 mb-2">500+</div>
-                    <div class="text-sm text-gray-600">Active builders</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-gray-900 mb-2">37</div>
-                    <div class="text-sm text-gray-600">SaaS launched</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-gray-900 mb-2">4.9★</div>
-                    <div class="text-sm text-gray-600">Average rating</div>
-                </div>
-            </div>
-
-            <!-- Enhanced Testimonials Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                            <span class="text-white text-lg font-bold">RM</span>
-                        </div>
-                        <div class="flex-1">
-                            <h4 class="font-semibold text-gray-900">Rahul M.</h4>
-                            <p class="text-sm text-gray-500">Mumbai • SaaS Founder</p>
-                        </div>
-                        <div class="flex gap-1">
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 0 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 1 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 1 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 1 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 1 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <p class="text-gray-700 leading-relaxed mb-4">"I spent 6 months trying to learn React. Built my first SaaS in 11 days after the masterclass. Already have 3 paying customers."</p>
-                        <p class="text-sm text-gray-600">The AI tools work, but the prompts and workflows are what make the difference. Abhi taught me how to think like an AI-powered developer.</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-6 border-t border-gray-100">
-                        <div>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="text-sm">
-                                    <span class="font-medium text-gray-900">Timeline:</span>
-                                    <span class="text-gray-600">11 days</span>
-                                </div>
-                                <div class="text-sm">
-                                    <span class="font-medium text-gray-900">Built with:</span>
-                                    <span class="text-gray-600">Cursor + v0</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-right">
-                            <div class="text-2xl font-bold text-green-600 mb-1">₹15k</div>
-                            <div class="text-xs text-gray-500">monthly revenue</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                            <span class="text-white text-lg font-bold">PS</span>
-                        </div>
-                        <div class="flex-1">
-                            <h4 class="font-semibold text-gray-900">Priya S.</h4>
-                            <p class="text-sm text-gray-500">Bangalore • App Developer</p>
-                        </div>
-                        <div class="flex gap-1">
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 1 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 1 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 1 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 1 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <p class="text-gray-700 leading-relaxed mb-4">"No coding background. Just followed the AI tools exactly as taught. My productivity app got 1000+ users in the first month."</p>
-                        <p class="text-sm text-gray-600">The community support is incredible. I ask questions, get immediate feedback, and learn from others' mistakes and successes.</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-6 border-t border-gray-100">
-                        <div>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="text-sm">
-                                    <span class="font-medium text-gray-900">Timeline:</span>
-                                    <span class="text-gray-600">2 weeks</span>
-                                </div>
-                                <div class="text-sm">
-                                    <span class="font-medium text-gray-900">Built with:</span>
-                                    <span class="text-gray-600">Lovable + AiStudio</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-right">
-                            <div class="text-2xl font-bold text-green-600 mb-1">1k+</div>
-                            <div class="text-xs text-gray-500">active users</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
-                            <span class="text-white text-lg font-bold">AK</span>
-                        </div>
-                        <div class="flex-1">
-                            <h4 class="font-semibold text-gray-900">Amit K.</h4>
-                            <p class="text-sm text-gray-500">Delhi • Freelancer</p>
-                        </div>
-                        <div class="flex gap-1">
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 1 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 1 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 1 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 2.902 0l2.833-1.014a3 3 0 0 0 3.578-1.014l3.578-1.014a1 1 0 0 0 1.066 1.066l-3.578 1.014a1 1 0 0 1-1.066 0l-2.833-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M7.352 4.694a1 1 0 1 1 1.066 0l3.578 1.014a1 1 0 0 0 1.066-1.066l-3.578-1.014a1 1 0 0 0-1.066 0z"/>
-                                <path d="M5.657 6.461a1 1 0 1 0 1.414 0l3.578 1.014a1 1 0 0 0 1.414-1.414l-3.578-1.014a1 1 0 0 0-1.414 0z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <p class="text-gray-700 leading-relaxed mb-4">"The timetoShip templates saved me 40+ hours. This is how building should be - fast and fun."</p>
-                        <p class="text-sm text-gray-600">As a freelancer, time is money. These templates let me take on more projects and deliver faster than ever before.</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-6 border-t border-gray-100">
-                        <div>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="text-sm">
-                                    <span class="font-medium text-gray-900">Timeline:</span>
-                                    <span class="text-gray-600">8 days</span>
-                                </div>
-                                <div class="text-sm">
-                                    <span class="font-medium text-gray-900">Built with:</span>
-                                    <span class="text-gray-600">timetoShip templates</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-right">
-                            <div class="text-2xl font-bold text-green-600 mb-1">₹8k</div>
-                            <div class="text-xs text-gray-500">first month</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- More Results Section -->
-            <div class="text-center">
-                <div class="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-full px-6 py-3">
-                    <div class="text-lg text-indigo-600 mb-0">📊</div>
-                    <span class="text-sm font-medium text-indigo-700">More Success Stories</span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                <div class="bg-white rounded-2xl p-6 border border-gray-200 text-center">
-                    <div class="text-lg font-bold text-gray-900 mb-2">Customer Support SaaS</div>
-                    <div class="text-sm text-gray-600 mb-3">Built by: Sarah L.</div>
-                    <div class="text-xs text-green-600">3 months → $5k MRR</div>
-                </div>
-                <div class="bg-white rounded-2xl p-6 border border-gray-200 text-center">
-                    <div class="text-lg font-bold text-gray-900 mb-2">Project Management Tool</div>
-                    <div class="text-sm text-gray-600 mb-3">Built by: Karthik R.</div>
-                    <div class="text-xs text-green-600">1 month → $2k MRR</div>
-                </div>
-                <div class="bg-white rounded-2xl p-6 border border-gray-200 text-center">
-                    <div class="text-lg font-bold text-gray-900 mb-2">Content Calendar App</div>
-                    <div class="text-sm text-gray-600 mb-3">Built by: Neha P.</div>
-                    <div class="text-xs text-green-600">2 weeks → 500 users</div>
-                </div>
-                <div class="bg-white rounded-2xl p-6 border border-gray-200 text-center">
-                    <div class="text-lg font-bold text-gray-900 mb-2">E-commerce Platform</div>
-                    <div class="text-sm text-gray-600 mb-3">Built by: Vikram S.</div>
-                    <div class="text-xs text-green-600">5 weeks → $10k MRR</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enhanced Instructor Section -->
-    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100 border-y border-gray-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl border-2 border-gray-200 p-12 shadow-lg">
-                <div class="text-center mb-8">
-                    <div class="inline-flex items-center gap-2 bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-bold mb-6">
-                        <i data-lucide="sparkles" class="w-4 h-4"></i>
-                        The OG Since GPT 3.5
-                    </div>
-                </div>
-
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="w-32 h-32 bg-gradient-to-br from-gray-900 to-black rounded-3xl flex items-center justify-center text-white text-3xl font-bold flex-shrink-0 shadow-xl">
-                        AD
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Abhi Deep</h3>
-                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">
-                            I'm not teaching you theory. I'm teaching you what I live every day.
-                            Since 2022, I've been in the trenches building with AI tools - selling automations,
-                            launching products, and making real money while others were still watching tutorials.
-                        </p>
-
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="flex items-center gap-3 bg-gray-50 rounded-lg p-3">
-                                <span class="text-xl">🚀</span>
-                                <span class="text-gray-700 font-medium">Started with GPT 3.5 in Nov 2022</span>
-                            </div>
-                            <div class="flex items-center gap-3 bg-gray-50 rounded-lg p-3">
-                                <span class="text-xl">💰</span>
-                                <span class="text-gray-700 font-medium">Sold multiple AI automations</span>
-                            </div>
-                            <div class="flex items-center gap-3 bg-gray-50 rounded-lg p-3">
-                                <span class="text-xl">🏗️</span>
-                                <span class="text-gray-700 font-medium">Built 10+ products using only AI</span>
-                            </div>
-                            <div class="flex items-center gap-3 bg-gray-50 rounded-lg p-3">
-                                <span class="text-xl">👥</span>
-                                <span class="text-gray-700 font-medium">Taught 500+ Indian builders</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-2xl p-6">
-                            <h4 class="font-bold text-gray-900 mb-3">Why Listen To Me?</h4>
-                            <div class="space-y-2 text-gray-700">
-                                <div class="flex items-start gap-2">
-                                    <i data-lucide="check" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                                    <span>I've been there since the beginning - GPT 3.5, GPT-4, Claude, every wave</span>
-                                </div>
-                                <div class="flex items-start gap-2">
-                                    <i data-lucide="check" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                                    <span>I make money from these tools daily, not just teaching about them</span>
-                                </div>
-                                <div class="flex items-start gap-2">
-                                    <i data-lucide="check" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                                    <span>I'm building in public - you can see my work, my wins, my failures</span>
-                                </div>
-                                <div class="flex items-start gap-2">
-                                    <i data-lucide="check" class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5"></i>
-                                    <span>I'm obsessed with making Indian builders win globally</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Minimal Registration Form -->
-    <section id="register" class="py-24 bg-gray-50">
-        <div class="max-w-md mx-auto px-6">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl font-light text-gray-900 mb-4">Join the Masterclass</h3>
-                <div class="flex items-center justify-center gap-6 text-sm text-gray-500">
-                    <span><span id="form-seats">37</span> seats left</span>
-                    <span>•</span>
-                    <span id="form-joined">63 builders enrolled</span>
-                </div>
-            </div>
-
-            <!-- Price Card -->
-            <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
-                <div class="text-center mb-8">
-                    <div class="text-4xl font-light text-gray-900 mb-2">₹99</div>
-                    <div class="text-sm text-gray-500">Special launch price</div>
-                </div>
-
-                <form id="registration-form" class="space-y-4 mb-8">
-                    <input type="text" id="name-input" placeholder="Name" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors" />
-                    <input type="email" id="email-input" placeholder="Email" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900 transition-colors" />
-                </form>
-
-                <button id="submit-btn" onclick="handleSubmit()" class="w-full bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors tracking-wide">
-                    Reserve Your Seat
+            <div class="bg-white rounded-lg border border-gray-200 p-8 text-center">
+                <div class="text-2xl font-bold text-gray-900 mb-4">This is your last chance to build ideas, not just dream about them.</div>
+                <button onclick="document.getElementById('register').scrollIntoView({ behavior: 'smooth' })" class="bg-black text-white px-8 py-3 rounded text-sm font-medium">
+                    Reserve Your Seat for ₹99
                 </button>
+            </div>
+        </div>
+    </section>
 
-                <div class="mt-6 text-center">
-                    <p class="text-xs text-gray-500">
-                        Price increases to ₹299 at midnight
-                    </p>
-                    <div class="flex justify-center gap-4 mt-3 text-xs text-gray-400">
-                        <span>30-day guarantee</span>
+    <!-- Registration Section -->
+    <section id="register" class="py-20 bg-black text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-light mb-4">Join 500+ AI Builders</h2>
+                <p class="text-xl text-gray-300">Last chance to get started at ₹99</p>
+            </div>
+
+            <div class="bg-white rounded-lg p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">What you're getting:</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-4 h-4 bg-green-500 rounded-full"></div>
+                                <span class="text-gray-700">Complete AI Agent Playbook</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-4 h-4 bg-green-500 rounded-full"></div>
+                                <span class="text-gray-700">Live SaaS Build Session</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-4 h-4 bg-green-500 rounded-full"></div>
+                                <span class="text-gray-700">2-Week Launch Blueprint</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-4 h-4 bg-green-500 rounded-full"></div>
+                                <span class="text-gray-700">Lifetime Community Access</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-4 h-4 bg-green-500 rounded-full"></div>
+                                <span class="text-gray-700">30-Day Money Back Guarantee</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Complete your registration:</h3>
+                        <form class="space-y-4" onsubmit="handleRegistration(event)">
+                            <input type="text" placeholder="Full Name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-black">
+                            <input type="email" placeholder="Email Address" required class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-black">
+                            <input type="tel" placeholder="Phone Number" required class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-black">
+                            <button type="submit" class="w-full bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                                Get Instant Access for ₹99
+                            </button>
+                        </form>
+
+                        <div class="flex items-center gap-4 mt-6 text-sm text-gray-600">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                <span>Secure payment</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                <span>Instant access</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <div class="flex items-center justify-center gap-6 text-sm text-gray-600">
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 bg-yellow-400 rounded-full"></div>
+                            <span><span id="seats-final">37</span> seats remaining</span>
+                        </div>
                         <span>•</span>
-                        <span>Secure payment</span>
+                        <div class="flex items-center gap-2">
+                            <div class="w-4 h-4 bg-red-500 rounded-full"></div>
+                            <span>Price increases in <span id="time-final">23:59:45</span></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Success Popup -->
-    <div id="success-popup" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50">
-        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center relative">
-            <button onclick="closePopup()" class="absolute top-4 right-4 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
-                <i data-lucide="x" class="w-4 h-4"></i>
-            </button>
-
-            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i data-lucide="check-circle" class="w-8 h-8 text-green-600"></i>
-            </div>
-
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">Welcome to AI Builder!</h3>
-            <p class="text-gray-600 mb-6">
-                Check your email for the masterclass link and your free AI prompts kit.
-            </p>
-
-            <div class="bg-blue-50 rounded-xl p-4 mb-6">
-                <p class="text-sm text-blue-800 font-medium">
-                    🎁 Bonus: You also get access to our private Discord community
-                </p>
-            </div>
-
-            <button onclick="closePopup()" class="w-full bg-black text-white py-3 rounded-xl font-semibold hover:bg-gray-800 transition-colors">
-                Got it!
-            </button>
-        </div>
-    </div>
-
-    <!-- Floating urgency badge -->
-    <div id="floating-urgency" class="fixed bottom-4 right-4 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse shadow-lg z-40 flex items-center gap-2 hidden">
-        <i data-lucide="alert-circle" class="w-4 h-4"></i>
-        Only <span id="floating-seats">10</span> seats left!
-    </div>
-
-    <!-- Minimal Footer -->
-    <footer class="border-t border-gray-100 py-16 bg-white">
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="flex items-center justify-center gap-3 mb-6">
-                <div class="w-6 h-6 bg-gradient-to-br from-gray-900 to-black rounded-lg flex items-center justify-center">
-                    <span class="text-white text-xs font-bold tracking-wider">CW</span>
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <div class="w-6 h-6 bg-gray-800 rounded flex items-center justify-center">
+                    <span class="text-white text-xs font-bold">CW</span>
                 </div>
-                <span class="text-lg font-light text-gray-900 tracking-wide">Co-Worker</span>
+                <span class="text-gray-100">Co-Worker</span>
             </div>
-            <p class="text-sm text-gray-500 mb-8">
-                Building the next generation of AI-powered companies
-            </p>
-            <div class="flex justify-center gap-8 text-xs text-gray-400">
-                <a href="#" class="hover:text-gray-600 transition-colors">Privacy</a>
-                <span>•</span>
-                <a href="#" class="hover:text-gray-600 transition-colors">Terms</a>
+            <p class="text-sm mb-2">Stop letting your ideas die in your notes. Start building with AI today.</p>
+            <div class="text-xs text-gray-500">
+                © 2024 Co-Worker. All rights reserved. • Privacy Policy • Terms of Service
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
 
-        // State
-        let state = {
-            hours: 23,
-            minutes: 59,
-            seconds: 45,
-            seatsLeft: 37,
-            recentJoiners: [
-                { name: "Rahul M.", city: "Mumbai" },
-                { name: "Priya S.", city: "Bangalore" },
-                { name: "Amit K.", city: "Delhi" }
-            ],
-            joinerNames = ["Suresh R.", "Neha P.", "Vikram L.", "Anjali M.", "Rohit G."],
-            joinerCities = ["Pune", "Hyderabad", "Chennai", "Kolkata", "Ahmedabad"]
-        };
-
-        // Timer update
+        // Timer functionality
         function updateTimer() {
-            const timer = setInterval(() => {
-                if (state.seconds > 0) {
-                    state.seconds--;
-                } else if (state.minutes > 0) {
-                    state.minutes--;
-                    state.seconds = 59;
-                } else if (state.hours > 0) {
-                    state.hours--;
-                    state.minutes = 59;
-                    state.seconds = 59;
-                }
+            const now = new Date();
+            const midnight = new Date();
+            midnight.setHours(24, 0, 0, 0);
 
-                // Update all timer displays
-                document.getElementById('hours').textContent = String(state.hours).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(state.minutes).padStart(2, '0');
-                document.getElementById('seconds').textContent = String(state.seconds).padStart(2, '0');
-                document.getElementById('popup-hours').textContent = state.hours;
-                document.getElementById('popup-minutes').textContent = state.minutes;
-            }, 1000);
+            const diff = midnight - now;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+            // Update final timer
+            document.getElementById('time-final').textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         }
 
-        // Update seats
+        // Update timer every second
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // Seat counter
+        let seats = 37;
         function updateSeats() {
-            setInterval(() => {
-                if (state.seatsLeft > 1) {
-                    state.seatsLeft--;
-                    updateAllSeatDisplays();
-                }
-            }, 30000); // Every 30 seconds
-        }
-
-        // Update recent joiners
-        function updateRecentJoiners() {
-            setInterval(() => {
-                const randomName = state.joinerNames[Math.floor(Math.random() * state.joinerNames.length)];
-                const randomCity = state.joinerCities[Math.floor(Math.random() * state.joinerCities.length)];
-
-                state.recentJoiners.unshift({ name: randomName, city: randomCity });
-                state.recentJoiners = state.recentJoiners.slice(0, 3);
-
-                document.getElementById('recent-joiner').textContent =
-                    `${state.recentJoiners[0].name} from ${state.recentJoiners[0].city} joined Just now`;
-            }, 45000); // Every 45 seconds
-        }
-
-        // Update all seat displays
-        function updateAllSeatDisplays() {
-            const seatsLeft = state.seatsLeft;
-            const joined = 100 - seatsLeft;
-
-            document.getElementById('seats-banner').textContent = seatsLeft;
-            document.getElementById('seats-hero').textContent = seatsLeft;
-            document.getElementById('form-seats').textContent = seatsLeft;
-            document.getElementById('builders-joined').textContent = joined;
-            document.getElementById('form-joined').textContent = `${joined} builders already joined`;
-            document.getElementById('floating-seats').textContent = seatsLeft;
-
-            // Show/hide floating badge
-            if (seatsLeft <= 10) {
-                document.getElementById('floating-urgency').classList.remove('hidden');
-                document.getElementById('floating-urgency').classList.add('flex');
+            const random = Math.random();
+            if (random < 0.1 && seats > 5) { // 10% chance to decrease
+                seats--;
+                document.getElementById('seats-banner').textContent = seats;
+                document.getElementById('seats-hero').textContent = seats;
+                document.getElementById('seats-final').textContent = seats;
             }
         }
+        setInterval(updateSeats, 5000);
 
-        // Form submission
-        function handleSubmit() {
-            const name = document.getElementById('name-input').value;
-            const email = document.getElementById('email-input').value;
+        // Recent joiner simulation
+        const names = ['Rahul', 'Priya', 'Amit', 'Neha', 'Vikram', 'Anjali', 'Rohit', 'Kavita'];
+        const cities = ['Mumbai', 'Delhi', 'Bangalore', 'Pune', 'Chennai', 'Kolkata'];
+        const times = ['1 min ago', '2 min ago', '5 min ago', '10 min ago', '15 min ago'];
 
-            if (!name || !email) {
-                alert('Please fill in all fields');
-                return;
+        function updateRecentJoiner() {
+            const name = names[Math.floor(Math.random() * names.length)];
+            const city = cities[Math.floor(Math.random() * cities.length)];
+            const time = times[Math.floor(Math.random() * times.length)];
+            document.getElementById('recent-joiner').textContent = `${name} from ${city} joined ${time}`;
+        }
+
+        setInterval(updateRecentJoiner, 8000);
+
+        // Builders joined counter
+        let builders = 63;
+        function updateBuilders() {
+            const random = Math.random();
+            if (random < 0.15) { // 15% chance to increase
+                builders++;
+                document.getElementById('builders-joined').textContent = builders;
             }
+        }
+        setInterval(updateBuilders, 3000);
 
-            // Show loading
-            const btn = document.getElementById('submit-btn');
-            btn.innerHTML = `
-                <div class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                Processing Your Registration...
-            `;
-            btn.disabled = true;
-
-            // Simulate processing
-            setTimeout(() => {
-                // Update seats
-                state.seatsLeft = Math.max(0, state.seatsLeft - 1);
-                updateAllSeatDisplays();
-
-                // Clear form
-                document.getElementById('name-input').value = '';
-                document.getElementById('email-input').value = '';
-
-                // Reset button
-                btn.innerHTML = `Pay ₹99 & Confirm Your Seat <i data-lucide="arrow-right" class="w-5 h-5"></i>`;
-                btn.disabled = false;
-                lucide.createIcons();
-
-                // Show popup
-                document.getElementById('success-popup').classList.remove('hidden');
-                document.getElementById('success-popup').classList.add('flex');
-            }, 1500);
+        // Registration handler
+        function handleRegistration(event) {
+            event.preventDefault();
+            alert('Thank you for registering! You will receive your access details via email shortly.');
+            // Here you would normally send the data to your backend
         }
 
-        // Close popup
-        function closePopup() {
-            document.getElementById('success-popup').classList.add('hidden');
-            document.getElementById('success-popup').classList.remove('flex');
-        }
+        // Add urgency popup when seats are low
+        function checkUrgency() {
+            if (seats <= 10 && seats > 5 && !document.querySelector('.urgency-popup')) {
+                const popup = document.createElement('div');
+                popup.className = 'urgency-popup fixed top-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-lg z-50';
+                popup.innerHTML = `
+                    <div class="font-bold mb-1">⚠️ Only ${seats} seats left!</div>
+                    <div class="text-sm">Join now before the price increases to ₹299</div>
+                `;
+                document.body.appendChild(popup);
 
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', function() {
-            updateTimer();
-            updateSeats();
-            updateRecentJoiners();
-            updateAllSeatDisplays();
-            lucide.createIcons();
-        });
+                setTimeout(() => {
+                    if (popup.parentNode) {
+                        popup.parentNode.removeChild(popup);
+                    }
+                }, 5000);
+            }
+        }
+        setInterval(checkUrgency, 10000);
     </script>
 </body>
 </html>
