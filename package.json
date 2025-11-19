@@ -2,18 +2,13 @@
   "name": "ai-builder-funnel",
   "version": "1.0.0",
   "description": "AI Builder Masterclass Landing Page",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "npx serve -s . -p 3000",
-    "dev": "npx serve -s . -p 3000 -l"
+    "dev": "npx serve -s . -p 3000 -l",
+    "build": "echo 'Static site - no build needed'"
   },
   "dependencies": {
-    "@lobehub/icons": "^2.43.1",
-    "lucide-react": "^0.554.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
     "serve": "^14.2.0"
   }
 }
